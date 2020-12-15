@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "endeavor.reptile", "src\endeavor.reptile\endeavor.reptile.pyproj", "{A69D7522-CD29-4FC7-8E8D-2BD8D88BC2C7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1268D7C2-6AD4-4E23-8BF0-2A39DC9ECDFB}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "endeavor.reptile", "src\endeavor.reptile\endeavor.reptile.pyproj", "{3B0EF579-BF7C-4AE0-9C50-9E18B42F28D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A69D7522-CD29-4FC7-8E8D-2BD8D88BC2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A69D7522-CD29-4FC7-8E8D-2BD8D88BC2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0EF579-BF7C-4AE0-9C50-9E18B42F28D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0EF579-BF7C-4AE0-9C50-9E18B42F28D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A69D7522-CD29-4FC7-8E8D-2BD8D88BC2C7} = {1268D7C2-6AD4-4E23-8BF0-2A39DC9ECDFB}
+		{3B0EF579-BF7C-4AE0-9C50-9E18B42F28D3} = {1268D7C2-6AD4-4E23-8BF0-2A39DC9ECDFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2EC837D-5B97-4EF9-8D56-6F6892C88D4E}
