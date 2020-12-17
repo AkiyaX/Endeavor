@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>55527cb1-c34b-4195-880f-e4a475d184c0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>endeavor.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="endeavor.py" />
     <Compile Include="items.py" />
+    <Compile Include="main.py" />
     <Compile Include="middlewares.py" />
     <Compile Include="pipelines.py" />
     <Compile Include="settings.py" />
