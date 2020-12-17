@@ -15,7 +15,8 @@ class ShipSpider(scrapy.Spider):
     def parse(self, response):
         ship_names = response.xpath(
             '//td/a/text()').extract()
-        ship_names = list(filter(lambda x: x != 'Squadron 42', ship_names))
+        ship_names = list(
+            filter(lambda x: x != 'Squadron 42' and '(' not in x, ship_names))
         log.info(f'Total ship count: {len(ship_names)}')
         for name in ship_names:
             log.info(name)
