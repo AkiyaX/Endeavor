@@ -35,5 +35,4 @@ jobs:
       uses: andymckay/pycodestyle-action@0.1.3
     - name: Run spider
       run: |
-        cd ./src/
-        scrapy crawl dmoz
+        python ./src/main.py
