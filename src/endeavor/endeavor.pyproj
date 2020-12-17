@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3b0ef579-bf7c-4ae0-9c50-9e18b42f28d3</ProjectGuid>
+    <ProjectGuid>55527cb1-c34b-4195-880f-e4a475d184c0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>main.py</StartupFile>
+    <StartupFile>endeavor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>endeavor.reptile</Name>
-    <RootNamespace>endeavor.reptile</RootNamespace>
+    <Name>endeavor</Name>
+    <RootNamespace>endeavor</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.py" />
+    <Compile Include="endeavor.py" />
+    <Compile Include="items.py" />
+    <Compile Include="middlewares.py" />
+    <Compile Include="pipelines.py" />
+    <Compile Include="settings.py" />
+    <Compile Include="spiders\dmoz_spider.py" />
+    <Compile Include="spiders\example.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="spiders\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
