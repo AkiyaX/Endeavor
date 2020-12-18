@@ -38,10 +38,10 @@ class ShipSpider(scrapy.Spider):
             # price
             price = ship.xpath(
                 'td[7]//text()').extract_first().replace('\n', '')
-            item['PledgePrice'] = price
             sc_state = ['Flight ready', 'In concept', 'In production']
             if state in sc_state and price:
+                item['PledgePrice'] = int(price)
                 count += 1
-                log.info(f'Get ship: {item["Name"]}')
+                log.info(f'Get ship: [{item["Name"]}]')
                 yield item
         log.info(f'Total ship count: {count}.')
