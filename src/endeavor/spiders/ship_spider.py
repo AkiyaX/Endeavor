@@ -20,7 +20,7 @@ class ShipSpider(scrapy.Spider):
             item = ShipItem()
             # name
             item['Name'] = ship.xpath(
-                'td[1]//text()').extract_first()
+                'td[1]//text()').extract_first().replace(' (replica)', '')
             # manufacturer
             item['Manufacturer'] = ship.xpath(
                 'td[2]//text()').extract_first().replace('\n', '')

@@ -37,15 +37,13 @@ class ShipItemPipeline(object):
         ship_item = ItemAdapter(item).asdict()
         name = ship_item['Name']
         key = {'Name': name}
-        try:
-            old = self.collection.find_one(key)
-            if old:
-                self.collection.update_one(key, {"$set": ship_item})
-            else:
-                self.collection.insert_one(ship_item)
+        old_one = self.collection.find_one(key)
+        if old_one:
+            self.collection.update_one(key, {"$set": ship_item})
             log.info(f'Update ship [{name}] success.')
-        except Exception as e:
-            log.error(f'Update ship [{name}] failed: {e}')
+        else:
+            self.collection.insert_one(ship_item)
+            log.info(f'Insert ship [{name}] success.')
         return item
 
     def close_spider(self, spider):
