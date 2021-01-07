@@ -5,6 +5,11 @@ from endeavor.items import ShipItem
 
 class ShipSpider(scrapy.Spider):
     name = 'ship'
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'endeavor.pipelines.ShipItemPipeline': 300
+        }
+    }
 
     def start_requests(self):
         urls = [
