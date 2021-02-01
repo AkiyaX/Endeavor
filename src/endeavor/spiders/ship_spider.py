@@ -4,7 +4,7 @@ from endeavor.items import ShipItem
 
 
 class ShipSpider(scrapy.Spider):
-    name = 'ship'
+    name = 'ship basic info spider from wiki'
     custom_settings = {
         'ITEM_PIPELINES': {
             'endeavor.pipelines.ShipItemPipeline': 300
