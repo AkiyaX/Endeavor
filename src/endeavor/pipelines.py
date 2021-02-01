@@ -5,6 +5,8 @@
 
 
 # useful for handling different item types with a single interface
+import os
+import requests
 import logging as log
 import pymongo
 from itemadapter import ItemAdapter
@@ -48,3 +50,26 @@ class ShipItemPipeline(object):
 
     def close_spider(self, spider):
         self.client.close()
+
+
+class ShipImagePipeline(object):
+
+    def process_item(self, item, spider):
+        ship_image = ItemAdapter(item).asdict()
+        folder = os.getcwd() + f'/ship/{ship_image["Name"]}'
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        i = 0
+        for url in ship_image['ImageUrls']:
+            i += 1
+            path = f'{folder}/{i}.jpeg'
+            if not url.startswith('https://'):
+                url = 'https://robertsspaceindustries.com' + url
+            requests.get(url)
+            r = requests.get(url)
+            with open(path, 'wb') as code:
+                code.write(r.content)
+        log.info(
+            f'Download ship image for {ship_image["Name"]} completed, '
+            + f'count: {i}.')
+        return item

@@ -2,3 +2,4 @@ Scrapy
 twisted
 pymongo
 dnspython
+requests
